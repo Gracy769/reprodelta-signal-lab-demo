@@ -12,8 +12,10 @@ substantial code around the classifier without claiming that ReproDelta ran it.
 
 ## Demo sequence
 
-1. Sign in to [ReproDelta](https://reprodelta-cloudflare.graceperez769.workers.dev/)
-   with GitHub and connect this public repository.
+1. Sign in with GitHub on the
+   [ReproDelta app](https://reprodelta-web-production.up.railway.app/) and
+   connect this public repository. GitHub OAuth currently finishes on that
+   domain; a Cloudflare-domain visit does not share its sign-in cookie.
 2. Open PR **#1, NumPy 2.0 upgrade**. It changes only `requirements.txt` from
    `numpy==1.26.4` to `numpy==2.0.2` while the trusted kernel stays byte-identical.
    This is the one PR that can enter ReproDelta's curated paired-run path.
